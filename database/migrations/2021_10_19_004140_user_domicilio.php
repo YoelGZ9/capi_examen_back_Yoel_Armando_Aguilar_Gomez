@@ -14,7 +14,8 @@ class UserDomicilio extends Migration
     public function up()
     {
         Schema::create('user_domicilio', function (Blueprint $table) {
-            $table->id('user_id');
+            $table->id();
+            $table->integer('user_id');
             $table->string('domicilio');
             $table->integer('numero_exterior');
             $table->string('colonia');
